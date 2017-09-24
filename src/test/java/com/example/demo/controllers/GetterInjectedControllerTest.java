@@ -7,21 +7,19 @@ import org.junit.Test;
 
 import com.example.demo.services.GreetingServiceImpl;
 
-
 public class GetterInjectedControllerTest {
 
 	private GetterInjectedController getterInjectedController;
-	
+
 	@Before
-	public void setUp() throws Exception{
+	public void setUp() throws Exception {
 		this.getterInjectedController = new GetterInjectedController();
 		this.getterInjectedController.setgreetingService(new GreetingServiceImpl());
 	}
-	
+
 	@Test
 	public void testGreeting() throws Exception {
 		assertEquals(GreetingServiceImpl.HELLOOM, getterInjectedController.sayHello());
 	}
-
 
 }
